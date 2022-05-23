@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of the United States?</h3>
+                <button id="answer1" class="question1-wrong">Virginia</button>
+                <button id="answer2">Washington, D.C.</button>
+                <button id="answer3" class="question1-wrong">New York</button>
+                <button id="answer4" class="question1-wrong">Philadelphia.</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Where is the Great Barrier Reef located?</h3>
+                <form action="">
+                    <input type="text" id="answer" placeholder="Answer here">
+                    <button id="submit">Submit</button>
+                </form>
+                <p id="feedback"></p>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.getElementById("answer2").addEventListener("click", function() {
+                document.getElementById("answer2").style.backgroundColor = "green";
+            });
+            document.querySelectorAll(".question1-wrong").forEach(function(button) {
+                button.addEventListener("click", function() {
+                    button.style.backgroundColor = "red";
+                });
+            });
+            document.getElementById("submit").addEventListener("click", function(event) {
+                if (document.getElementById("answer").value.toLowerCase() === "australia")
+                {
+                    document.getElementById("answer").style.backgroundColor = "green";
+                    document.getElementById("feedback").innerHTML = "Correct!";
+                    document.getElementById("feedback").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("answer").style.backgroundColor = "red";
+                    document.getElementById("feedback").innerHTML = "Incorrect!";
+                    document.getElementById("feedback").style.color = "red";
+                }
+                setTimeout(function(){}, 1000);
+            });
+        </script>
+    </body>
+</html>

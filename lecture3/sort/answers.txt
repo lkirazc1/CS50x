@@ -1,0 +1,6 @@
+sort1 uses: bubble sort
+How do you know?: Because I know bubble sort takes a long time to take the smaller numbers to the front of the list
+sort2 uses: merge sort
+How do you know?: Merge sort is the fastest and seemed like it was going the fastest.
+sort3 uses: selection sort
+How do you know?: Selection sort was equally fast on the random and reversed so it was selection sort.
